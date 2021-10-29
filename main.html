@@ -38,7 +38,7 @@
     [myName2, myRole2] = array; 
     console.log(myName2, myRole2);
 
-  // object Destructuring
+    // object Destructuring
     let myNameTest, myRoleTest;
     let object = {
       myNameTest:'Daliya', 
@@ -47,7 +47,13 @@
     ({myNameTest, myRoleTest}=object);
     console.log(myNameTest, myRoleTest);
 
-
+    // arrow function
+    let getName = ((firstName, lastName) => {
+      let myRole = 'Software Developer';
+      console.log(firstName);
+      return `My name is ${firstName} ${lastName} I am a ${myRole}.`;
+    });
+    
   </script>
   <main>
     <h2>ES6</h2>
@@ -123,7 +129,20 @@
         ({myNameTest, myRoleTest}=object);
       </code>
     </pre>
-
+    <h3>Arrow function expressions</h3>
+    <p>New syntax to writing ordinary function expressions.</p>
+    <p>With arrow function expressions we can ignore function and return with one-liner code.</p>
+    <p>It contain a block of statements.</p>
+    <p>Arrow functions do not have their own this.</p>
+    <pre>
+      <code>
+        let getName = ((firstName, lastName) => {
+          let myRole = 'Software Developer';
+          return `My name is ${firstName} ${lastName} I am a ${myRole}.`;
+        });
+      </code>
+    </pre>
+    
   </main>
 </body>
 </html>
