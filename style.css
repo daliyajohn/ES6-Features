@@ -11,3 +11,10 @@ pre {
   line-height: 24px;
   border: 2px solid whitesmoke;
 }
+h2 {
+  text-transform: uppercase;
+}
+ul li {
+  font-size: 15px;
+  line-height: 2;
+}
