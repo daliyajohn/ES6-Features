@@ -10,15 +10,18 @@
 </head>
 <body>
   <script>
+    // Default parameters
     function fullName(firstName, lastName ='John', fullName = firstName + ' ' + lastName ) {
       return fullName;
     }
     fullName('daliya');
 
+    // Template literals
     let myName = 'Daliya';
     let myRole = 'Software Developer';
     console.log(`My name is ${myName} and I am a ${myRole}.`);
 
+    // Tagged Templates
     let myName1 = 'Daliya';
     let myRole1 = 'Software Developer';
     function myTag(array, name, role){
@@ -28,6 +31,22 @@
       return `${str0}${name}${str1}${role}`;
     }
     myTag`My name is ${myName1} and I am ${myRole1}`;
+
+    // Array Destructuring
+    let myName2, myRole2;
+    let array = ['Daliya', 'Software Developer'];
+    [myName2, myRole2] = array; 
+    console.log(myName2, myRole2);
+
+  // object Destructuring
+    let myNameTest, myRoleTest;
+    let object = {
+      myNameTest:'Daliya', 
+      myRoleTest:'Developer'
+    };
+    ({myNameTest, myRoleTest}=object);
+    console.log(myNameTest, myRoleTest);
+
 
   </script>
   <main>
@@ -82,6 +101,29 @@
         myTag`My name is ${myName} and I am ${myRole}`;
       </code>
     </pre>
+    <h3>Destructuring assignment</h3>
+    <p>The destructuring assignment allows reading values from an array or properties from an object, into distinct variables.</p>
+    <h5>Destructuring an array</h5>
+    <pre>
+      <code>
+        let myName2, myRole2;
+        let array = ['John', 'Software Developer'];
+        [myName2, myRole2] = array; 
+        console.log(myName2, myRole2);
+      </code>
+    </pre>
+    <h5>Destructuring an object</h5>
+    <pre>
+      <code>
+        let myNameTest, myRoleTest;
+        let object = {
+          myNameTest:'Daliya', 
+          myRoleTest:'Developer'
+        };
+        ({myNameTest, myRoleTest}=object);
+      </code>
+    </pre>
+
   </main>
 </body>
 </html>
