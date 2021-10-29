@@ -184,7 +184,40 @@
         const obj.firstName = 'Toad'; //acceptable, as the key is not protected
       </code>
     </pre>
-   
+    <h3>Object.assign()</h3>
+    <p>Object.assign() method can be used to clone an object.</p>
+    <pre>
+      <code>
+        let person = { height: '176' };
+        let clonePerson = Object.assign({}, person);
+        console.log(clonePerson); // {height:'176'}
+      </code>
+    </pre>
+    <p>Object.assign() can also be used to merge objects.</p>
+    <p>If source objects have the same properties, the properties of the later object overwrite the properties of the earlier one in the merged object.</p>
+    <pre>
+      <code>
+        let person = {height:'176'};
+        let employee = {id:'#1237', name:'John'};
+        let myEmp = Object.assign({}, person, employee);
+        console.log(myEmp); //{height:'176',id:'#1237', name:'John'}
+      </code>
+    </pre>
+    <h3>Object.is()</h3>
+    <p>Determines if the two values are the same.</p>
+    <pre>
+      <code>
+        let a=10, b=10;
+        Object.is(a,b); //true
+        let c=20;
+        Object.is(a,c);//false
+        let obj1={a:1};
+        let obj2={a:1};
+        Object.is(obj1, obj2);//false, as both objects don't have same reference
+        Object.is(obj1, obj1);//true, both objects have the same reference
+      </code>
+    </pre>
+    
   </main>
 </body>
 </html>
