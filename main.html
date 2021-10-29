@@ -217,7 +217,32 @@
         Object.is(obj1, obj1);//true, both objects have the same reference
       </code>
     </pre>
-    
+    <h3>Classes</h3>
+    <p>Classes are a template for creating objects.</p>
+    <p>A class consists of its own properties and methods that can be referenced using the this keyword inside the class.</p>
+    <pre>
+      <code>
+        Class Person{
+          constructor(name, age){
+            this.name = name;
+            this.age = age;
+          }
+        }
+      </code>
+    </pre>
+    <p>You can create an instance of a class using a new keyword</p>
+    <pre>
+      <code>
+        Class Person {
+          Name='John';
+          getName(){
+          return this.name;//returns John
+              }
+         }
+         let p = new Person();
+         console.log(p.getName()); //prints John
+      </code>
+    </pre>
   </main>
 </body>
 </html>
