@@ -19,6 +19,15 @@
     let myRole = 'Software Developer';
     console.log(`My name is ${myName} and I am a ${myRole}.`);
 
+    let myName1 = 'Daliya';
+    let myRole1 = 'Software Developer';
+    function myTag(array, name, role){
+      console.log(array);
+      let str0 = array[0]; 
+      let str1 = array[1]; 
+      return `${str0}${name}${str1}${role}`;
+    }
+    myTag`My name is ${myName1} and I am ${myRole1}`;
 
   </script>
   <main>
@@ -59,10 +68,18 @@
     <h3>
       Tagged Templates
     </h3>
-    <p></p>
+    <p>Parse template literals with a function.</p>
     <pre>
       <code>
-        
+        let myName = 'Daliya';
+        let myRole = 'Software Developer';
+        function myTag(array, name, role){
+          console.log(array);
+          let str0 = array[0]; 
+          let str1 = array[1]; 
+          return `${str0}${name}${str1}${role}`;
+        }
+        myTag`My name is ${myName} and I am ${myRole}`;
       </code>
     </pre>
   </main>
