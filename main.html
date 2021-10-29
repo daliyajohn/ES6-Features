@@ -142,7 +142,49 @@
         });
       </code>
     </pre>
-    
+    <h3>Let and const</h3>
+    <p>The let statement declares a block-scoped local variable</p>
+    <p>The var statement, function scoped statement</p>
+    <h5>let</h5>
+    <pre>
+      <code>
+        let x = 10;
+        if(x==10){
+         let x = 20;
+        console.log(x); //prints 20
+        }
+        console.log(x); //prints 10;
+      </code>
+    </pre>
+    <h5>var</h5>
+    <pre>
+      <code>
+        var x = 10;
+        if(x==10){
+        var x = 20;
+        console.log(x); //prints 20
+        }
+        console.log(x); //prints 20;
+      </code>
+    </pre>
+    <h5>Const</h5>
+    <p>A const statement does not allow reassignment or redeclaration of the variable. The value is mutable.</p>
+    <pre>
+      <code>
+        const myName; //throws error as const needs to be initialized
+        const myName='John';
+        const myName='Doe'; //throws  error as const variable can not be reassigned   
+      </code>
+    </pre>
+    <p>We can manipulate values of keys but cannot overwrite the object value</p>
+    <pre>
+      <code>
+        const obj = {'firstName':'John'};
+        const obj = {'name':'Toad'}; // throws error, can reassign an const variable
+        const obj.firstName = 'Toad'; //acceptable, as the key is not protected
+      </code>
+    </pre>
+   
   </main>
 </body>
 </html>
