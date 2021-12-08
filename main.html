@@ -53,6 +53,19 @@
       console.log(firstName);
       return `My name is ${firstName} ${lastName} I am a ${myRole}.`;
     });
+
+    // forEach  
+    var products = [
+      {name:'Iphone',price:200},
+      {name:'Motorola',price:70},
+      {name:'Samsung',price:150},
+      {name:'Sony',price:98},
+      {name:'Windows pone',price:10}
+    ];
+
+    products.forEach((product) => {
+      let gg = product;
+    })
     
   </script>
   <main>
@@ -235,14 +248,29 @@
       <code>
         Class Person {
           Name='John';
-          getName(){
-          return this.name;//returns John
-              }
-         }
-         let p = new Person();
-         console.log(p.getName()); //prints John
+          getName() {
+            return this.name;//returns John
+          }
+        }
+        let p = new Person();
+        console.log(p.getName()); //prints John
       </code>
     </pre>
+
+    <h2>Array helpers and Loop</h2>
+    <h3>
+      ForEach
+    </h3>
+    <p>The forEach() method calls a function for each element in an array.</p>
+    <pre>
+      <code>
+        const fruits = ["apple", "orange", "cherry"];
+        fruits.forEach(function(fruit) {
+          console.log(fruit);
+        })
+      </code>
+    </pre>
+
   </main>
 </body>
 </html>
