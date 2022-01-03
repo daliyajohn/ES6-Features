@@ -66,6 +66,19 @@
     products.forEach((product) => {
       let gg = product;
     })
+
+    // filter 
+    const channels = [
+      {name:'HBO',premium:true},
+      {name:'LIFE',premium:false},
+      {name:'Max',premium:true},
+      {name:'Cooking channel',premium:false},
+      {name:'WOBI',premium:false}
+    ];
+    const newPremiumArray = channels.filter((channel) => {
+      return channel.premium === true;
+    });
+    console.log(newPremiumArray);
     
   </script>
   <main>
@@ -262,6 +275,8 @@
       ForEach
     </h3>
     <p>The forEach() method calls a function for each element in an array.</p>
+    <h4>Syntax</h4>
+    <p>array.forEach(function(currentValue, index, arr), thisValue)</p>
     <pre>
       <code>
         const fruits = ["apple", "orange", "cherry"];
@@ -270,6 +285,43 @@
         })
       </code>
     </pre>
+
+    <h3>
+      Map
+    </h3>
+    <p>map() creates a new array from calling a function for every array element.</p>
+    <p> map() does not change the original array.</p>
+    <h4>Syntax</h4>
+    <p>array.map(function(currentValue, index, arr), thisValue)</p>
+    <pre>
+      <code>
+        const numbers = [1, 2, 3, 4, 5];
+        const anotherArray = numbers.map(function(number) {
+          return number * 10;
+        });
+      </code>
+    </pre>
+
+    <h3>
+      Filter
+    </h3>
+    <p>The filter() method creates a new array filled with elements that pass a test provided by a function. If no elements pass the test it returns an empty array.</p>
+    <p> The filter() method does not change the original array.</p>
+    <h4>Syntax</h4>
+    <p>array.filter(function(currentValue, index, arr), thisValue)</p>
+    <pre>
+      <code>
+        const channels = [
+          {name:'HBO',premium:true},
+          {name:'Max',premium:true},
+          {name:'WOBI',premium:false}
+        ];
+        const newPremiumArray = channels.filter((channel) => {
+          return channel.premium === true;
+        });
+      </code>
+    </pre>
+
 
   </main>
 </body>
