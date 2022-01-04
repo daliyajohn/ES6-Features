@@ -104,7 +104,21 @@
     }
     console.log(user.premiumChannels());
     console.log(user.channels());
-    
+
+    // reduce 
+    const channelLists = [
+      {name:'HBO',premium:true},
+      {name:'LIFE',premium:false},
+      {name:'Max',premium:true},
+      {name:'Cooking channel',premium:false},
+      {name:'WOBI',premium:false}
+    ];
+    const list = channelLists.reduce(function(nameList, curntList) {
+      nameList.push(curntList.name);
+      return nameList;
+    },[]);
+    console.log(list);
+
   </script>
   <main>
     <h2>ES6</h2>
@@ -297,7 +311,7 @@
 
     <h2>Array helpers and Loop</h2>
     <h3>
-      ForEach
+      ForEach()
     </h3>
     <p>The forEach() method calls a function for each element in an array.</p>
     <h4>Syntax</h4>
@@ -312,7 +326,7 @@
     </pre>
 
     <h3>
-      Map
+      Map()
     </h3>
     <p>map() creates a new array from calling a function for every array element.</p>
     <p> map() does not change the original array.</p>
@@ -328,7 +342,7 @@
     </pre>
 
     <h3>
-      Filter
+      Filter()
     </h3>
     <p>The filter() method creates a new array filled with elements that pass a test provided by a function. If no elements pass the test it returns an empty array.</p>
     <p> The filter() method does not change the original array.</p>
@@ -347,9 +361,8 @@
       </code>
     </pre>
 
-
     <h3>
-      Find
+      Find()
     </h3>
     <p> The find() method returns the value of the first element that passes a test.</p>
     <p> The find() method executes a function for each array element.</p>
@@ -375,9 +388,8 @@
       </code>
     </pre>
 
-
     <h3>
-      Every and Some
+      Every() and Some()
     </h3>
     <p>The <strong>some()</strong> method checks if any array elements pass a test. </p>
     <p> The <strong>every()</strong> method executes a function for each array element.</p>
@@ -392,6 +404,30 @@
         array.some(even);
       </code>
     </pre>
+
+    <h3>
+      Reduce()
+    </h3>
+    <p>The reduce() method executes a reducer function for array element.</p>
+    <p>Return array</p>
+    <h4>Syntax</h4>
+    <p>array.reduce(function(total, currentValue, currentIndex, arr), initialValue)</p>
+    <pre>
+      <code>
+        const channelLists = [
+          {name:'HBO',premium:true},
+          {name:'LIFE',premium:false},
+          {name:'Max',premium:true},
+          {name:'Cooking channel',premium:false},
+          {name:'WOBI',premium:false}
+        ];
+        const list = channelLists.reduce(function(nameList, curntList) {
+          nameList.push(curntList.name);
+          return nameList;
+        },[]);
+      </code>
+    </pre>
+
   </main>
 </body>
 </html>
