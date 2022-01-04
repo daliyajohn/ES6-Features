@@ -118,6 +118,16 @@
       return nameList;
     },[]);
     console.log(list);
+    // reduce another example   
+    const trips = [
+      {to:'Brazil',distance:1000},
+      {to:'Chine',distance: 2500},
+      {to:'India',distance: 3000}
+    ];
+    const tripsDistance = trips.reduce((totalDistance, dist) => {
+      return totalDistance + dist.distance
+    }, 0)
+    console.log(tripsDistance);
 
   </script>
   <main>
