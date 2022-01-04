@@ -10,9 +10,15 @@ pre {
   font-size: 15px;
   line-height: 24px;
   border: 2px solid whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 h2 {
   text-transform: uppercase;
+  color: #1536e7;
+  margin-top: 30px;
+}
+h3 {
+  color: #ed0707;
 }
 ul li {
   font-size: 15px;

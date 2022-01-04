@@ -370,8 +370,26 @@
           {name:'WOBI',premium:false}
         ];
         const newPremiumArray = channels.filter((channel) => {
-          return channel.premium === true;
+          return channel.premium;
         });
+      </code>
+    </pre>
+
+
+    <h3>
+      Every and Some
+    </h3>
+    <p>The <strong>some()</strong> method checks if any array elements pass a test. </p>
+    <p> The <strong>every()</strong> method executes a function for each array element.</p>
+    <p> The every() method returns true if the function returns true for all elements.</p>
+    <p>Return true / false</p>
+    <h4>Syntax</h4>
+    <p>array.every(function(value, index, arr), this) , array.some(function(value, index, arr), this)</p>
+    <pre>
+      <code>
+        const array = [1, 2, 3, 4, 5];
+        const even = (element) => element % 2 === 0;
+        array.some(even);
       </code>
     </pre>
   </main>
