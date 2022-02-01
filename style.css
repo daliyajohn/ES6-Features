@@ -7,10 +7,11 @@ main {
 }
 pre {
   background: #80808008;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
   border: 2px solid whitesmoke;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+  overflow-y: auto;
 }
 h2 {
   text-transform: uppercase;

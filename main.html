@@ -117,6 +117,7 @@
       nameList.push(curntList.name);
       return nameList;
     },[]);
+    
     console.log(list);
     // reduce another example   
     const trips = [
@@ -128,6 +129,18 @@
       return totalDistance + dist.distance
     }, 0)
     console.log(tripsDistance);
+
+    let createVal = (name,lastname,age) => {
+      return {name,lastname,age}
+    }
+    console.log(createVal('sa', 'sas', 4))
+
+    let dd =   (name) => {
+      name = 'user'
+      return 'Hello '+ name;
+    }
+    console.log(dd())
+
 
   </script>
   <main>
@@ -150,19 +163,19 @@
       This can be achieved with the help of default function parameters.</p>
     <pre>
       <code>
-        function fullName(firstName, lastName ='John', fullName = firstName + ' ' + lastName ) {
-          return fullName;
-        }
-        fullName('Daliya'); // return Daliya John
+      function fullName(firstName, lastName ='John', fullName = firstName + ' ' + lastName ) {
+        return fullName;
+      }
+      fullName('Daliya'); // return Daliya John
       </code>
     </pre>
     <h3>Template literals (Template strings)</h3>
     <p>Template literals allow embedded expressions, multi-line strings and string interpolation.</p>
     <pre>
       <code>
-        let myName = 'Daliya';
-        let myRole = 'Software Developer';
-        console.log(`My name is ${myName} and I am a ${myRole}.`); // My name is John and I am a Software Developer
+      let myName = 'Daliya';
+      let myRole = 'Software Developer';
+      console.log(`My name is ${myName} and I am a ${myRole}.`); // My name is John and I am a Software Developer
       </code>
     </pre>
     <h3>
@@ -171,15 +184,15 @@
     <p>Parse template literals with a function.</p>
     <pre>
       <code>
-        let myName = 'Daliya';
-        let myRole = 'Software Developer';
-        function myTag(array, name, role){
-          console.log(array);
-          let str0 = array[0]; 
-          let str1 = array[1]; 
-          return `${str0}${name}${str1}${role}`;
-        }
-        myTag`My name is ${myName} and I am ${myRole}`;
+      let myName = 'Daliya';
+      let myRole = 'Software Developer';
+      function myTag(array, name, role){
+        console.log(array);
+        let str0 = array[0]; 
+        let str1 = array[1]; 
+        return `${str0}${name}${str1}${role}`;
+      }
+      myTag`My name is ${myName} and I am ${myRole}`;
       </code>
     </pre>
     <h3>Destructuring assignment</h3>
@@ -187,21 +200,21 @@
     <h5>Destructuring an array</h5>
     <pre>
       <code>
-        let myName2, myRole2;
-        let array = ['John', 'Software Developer'];
-        [myName2, myRole2] = array; 
-        console.log(myName2, myRole2);
+      let myName2, myRole2;
+      let array = ['John', 'Software Developer'];
+      [myName2, myRole2] = array; 
+      console.log(myName2, myRole2);
       </code>
     </pre>
     <h5>Destructuring an object</h5>
     <pre>
       <code>
-        let myNameTest, myRoleTest;
-        let object = {
-          myNameTest:'Daliya', 
-          myRoleTest:'Developer'
-        };
-        ({myNameTest, myRoleTest}=object);
+      let myNameTest, myRoleTest;
+      let object = {
+        myNameTest:'Daliya', 
+        myRoleTest:'Developer'
+      };
+      ({myNameTest, myRoleTest}=object);
       </code>
     </pre>
     <h3>Arrow function expressions</h3>
@@ -211,10 +224,10 @@
     <p>Arrow functions do not have their own this.</p>
     <pre>
       <code>
-        let getName = ((firstName, lastName) => {
-          let myRole = 'Software Developer';
-          return `My name is ${firstName} ${lastName} I am a ${myRole}.`;
-        });
+      let getName = ((firstName, lastName) => {
+        let myRole = 'Software Developer';
+        return `My name is ${firstName} ${lastName} I am a ${myRole}.`;
+      });
       </code>
     </pre>
     <h3>Let and const</h3>
@@ -223,73 +236,73 @@
     <h5>let</h5>
     <pre>
       <code>
-        let x = 10;
-        if(x==10){
-         let x = 20;
-        console.log(x); //prints 20
-        }
-        console.log(x); //prints 10;
+      let x = 10;
+      if(x==10){
+        let x = 20;
+      console.log(x); //prints 20
+      }
+      console.log(x); //prints 10;
       </code>
     </pre>
     <h5>var</h5>
     <pre>
       <code>
-        var x = 10;
-        if(x==10){
-        var x = 20;
-        console.log(x); //prints 20
-        }
-        console.log(x); //prints 20;
+      var x = 10;
+      if(x==10){
+      var x = 20;
+      console.log(x); //prints 20
+      }
+      console.log(x); //prints 20;
       </code>
     </pre>
     <h5>Const</h5>
     <p>A const statement does not allow reassignment or redeclaration of the variable. The value is mutable.</p>
     <pre>
       <code>
-        const myName; //throws error as const needs to be initialized
-        const myName='John';
-        const myName='Doe'; //throws  error as const variable can not be reassigned   
+      const myName; //throws error as const needs to be initialized
+      const myName='John';
+      const myName='Doe'; //throws  error as const variable can not be reassigned   
       </code>
     </pre>
     <p>We can manipulate values of keys but cannot overwrite the object value</p>
     <pre>
       <code>
-        const obj = {'firstName':'John'};
-        const obj = {'name':'Toad'}; // throws error, can reassign an const variable
-        const obj.firstName = 'Toad'; //acceptable, as the key is not protected
+      const obj = {'firstName':'John'};
+      const obj = {'name':'Toad'}; // throws error, can reassign an const variable
+      const obj.firstName = 'Toad'; //acceptable, as the key is not protected
       </code>
     </pre>
     <h3>Object.assign()</h3>
     <p>Object.assign() method can be used to clone an object.</p>
     <pre>
       <code>
-        let person = { height: '176' };
-        let clonePerson = Object.assign({}, person);
-        console.log(clonePerson); // {height:'176'}
+      let person = { height: '176' };
+      let clonePerson = Object.assign({}, person);
+      console.log(clonePerson); // {height:'176'}
       </code>
     </pre>
     <p>Object.assign() can also be used to merge objects.</p>
     <p>If source objects have the same properties, the properties of the later object overwrite the properties of the earlier one in the merged object.</p>
     <pre>
       <code>
-        let person = {height:'176'};
-        let employee = {id:'#1237', name:'John'};
-        let myEmp = Object.assign({}, person, employee);
-        console.log(myEmp); //{height:'176',id:'#1237', name:'John'}
+      let person = {height:'176'};
+      let employee = {id:'#1237', name:'John'};
+      let myEmp = Object.assign({}, person, employee);
+      console.log(myEmp); //{height:'176',id:'#1237', name:'John'}
       </code>
     </pre>
     <h3>Object.is()</h3>
     <p>Determines if the two values are the same.</p>
     <pre>
       <code>
-        let a=10, b=10;
-        Object.is(a,b); //true
-        let c=20;
-        Object.is(a,c);//false
-        let obj1={a:1};
-        let obj2={a:1};
-        Object.is(obj1, obj2);//false, as both objects don't have same reference
-        Object.is(obj1, obj1);//true, both objects have the same reference
+      let a=10, b=10;
+      Object.is(a,b); //true
+      let c=20;
+      Object.is(a,c);//false
+      let obj1={a:1};
+      let obj2={a:1};
+      Object.is(obj1, obj2);//false, as both objects don't have same reference
+      Object.is(obj1, obj1);//true, both objects have the same reference
       </code>
     </pre>
     <h3>Classes</h3>
@@ -297,25 +310,25 @@
     <p>A class consists of its own properties and methods that can be referenced using the this keyword inside the class.</p>
     <pre>
       <code>
-        Class Person{
-          constructor(name, age){
-            this.name = name;
-            this.age = age;
-          }
+      Class Person{
+        constructor(name, age){
+          this.name = name;
+          this.age = age;
         }
+      }
       </code>
     </pre>
     <p>You can create an instance of a class using a new keyword</p>
     <pre>
       <code>
-        Class Person {
-          Name='John';
-          getName() {
-            return this.name;//returns John
-          }
+      Class Person {
+        Name='John';
+        getName() {
+          return this.name;//returns John
         }
-        let p = new Person();
-        console.log(p.getName()); //prints John
+      }
+      let p = new Person();
+      console.log(p.getName()); //prints John
       </code>
     </pre>
 
@@ -328,10 +341,10 @@
     <p>array.forEach(function(currentValue, index, arr), thisValue)</p>
     <pre>
       <code>
-        const fruits = ["apple", "orange", "cherry"];
-        fruits.forEach(function(fruit) {
-          console.log(fruit);
-        })
+      const fruits = ["apple", "orange", "cherry"];
+      fruits.forEach(function(fruit) {
+        console.log(fruit);
+      })
       </code>
     </pre>
 
@@ -344,10 +357,10 @@
     <p>array.map(function(currentValue, index, arr), thisValue)</p>
     <pre>
       <code>
-        const numbers = [1, 2, 3, 4, 5];
-        const anotherArray = numbers.map(function(number) {
-          return number * 10;
-        });
+      const numbers = [1, 2, 3, 4, 5];
+      const anotherArray = numbers.map(function(number) {
+        return number * 10;
+      });
       </code>
     </pre>
 
@@ -360,14 +373,14 @@
     <p>array.filter(function(currentValue, index, arr), thisValue)</p>
     <pre>
       <code>
-        const channels = [
-          {name:'HBO',premium:true},
-          {name:'Max',premium:true},
-          {name:'WOBI',premium:false}
-        ];
-        const newPremiumArray = channels.filter((channel) => {
-          return channel.premium === true;
-        });
+      const channels = [
+        {name:'HBO',premium:true},
+        {name:'Max',premium:true},
+        {name:'WOBI',premium:false}
+      ];
+      const newPremiumArray = channels.filter((channel) => {
+        return channel.premium === true;
+      });
       </code>
     </pre>
 
@@ -387,14 +400,14 @@
     <p>array.find(function(currentValue, index, arr),thisValue)</p>
     <pre>
       <code>
-        const channels = [
-          {name:'HBO',premium:true},
-          {name:'Max',premium:true},
-          {name:'WOBI',premium:false}
-        ];
-        const newPremiumArray = channels.filter((channel) => {
-          return channel.premium;
-        });
+      const channels = [
+        {name:'HBO',premium:true},
+        {name:'Max',premium:true},
+        {name:'WOBI',premium:false}
+      ];
+      const newPremiumArray = channels.filter((channel) => {
+        return channel.premium;
+      });
       </code>
     </pre>
 
@@ -409,9 +422,9 @@
     <p>array.every(function(value, index, arr), this) , array.some(function(value, index, arr), this)</p>
     <pre>
       <code>
-        const array = [1, 2, 3, 4, 5];
-        const even = (element) => element % 2 === 0;
-        array.some(even);
+      const array = [1, 2, 3, 4, 5];
+      const even = (element) => element % 2 === 0;
+      array.some(even);
       </code>
     </pre>
 
@@ -424,20 +437,35 @@
     <p>array.reduce(function(total, currentValue, currentIndex, arr), initialValue)</p>
     <pre>
       <code>
-        const channelLists = [
-          {name:'HBO',premium:true},
-          {name:'LIFE',premium:false},
-          {name:'Max',premium:true},
-          {name:'Cooking channel',premium:false},
-          {name:'WOBI',premium:false}
-        ];
-        const list = channelLists.reduce(function(nameList, curntList) {
-          nameList.push(curntList.name);
-          return nameList;
-        },[]);
+      const channelLists = [
+        {name:'HBO',premium:true},
+        {name:'LIFE',premium:false},
+        {name:'Max',premium:true},
+        {name:'Cooking channel',premium:false},
+        {name:'WOBI',premium:false}
+      ];
+      const list = channelLists.reduce((nameList, curntList) => {
+        nameList.push(curntList.name);
+        return nameList;
+      },[]);
       </code>
     </pre>
 
+    <h3>
+      Arrow functions()
+    </h3>
+    <p>An arrow function expression is a compact alternative to a traditional function expression</p>
+    <pre>
+      <code>
+      const materials = [
+        'Hydrogen',
+        'Helium',
+        'Lithium',
+        'Beryllium'
+      ];
+      materials.map(material => material.length)
+      </code>
+    </pre>
   </main>
 </body>
 </html>
