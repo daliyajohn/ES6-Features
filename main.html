@@ -466,6 +466,25 @@
       materials.map(material => material.length)
       </code>
     </pre>
+
+    <h3>
+      Rest parameter 
+    </h3>
+    <p>Allows a function to accept an indefinite number of arguments as an <strong>array</strong> .</p>
+    <p>Only the last parameter in a function definition can be a rest parameter.</p>
+    <p>Rest parameters are Array instances, meaning methods like sort, map, forEach or pop can be applied on it directly.</p>
+    <pre>
+      <code>
+      function sum(...theArgs) {
+        return theArgs.reduce((previous, current) => {
+          return previous + current;
+        });
+      }
+      console.log(sum(1, 2, 3));
+      // expected output: 6
+      </code>
+    </pre>
+
   </main>
 </body>
 </html>
