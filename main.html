@@ -415,7 +415,7 @@
         {name:'Max',premium:true},
         {name:'WOBI',premium:false}
       ];
-      const newPremiumArray = channels.filter((channel) => {
+      const newPremiumArray = channels.find((channel) => {
         return channel.premium;
       });
       </code>
